@@ -6,12 +6,7 @@ describe('My Store Home page', () => {
         expect(browser).toHaveTitle('My Store');
         LoginPage.signinlink();
         LoginPage.login("equanimous.dhanu@gmail.com","Test@123");
-
         LoginPage.loggedInUserNameVerify();
-
-        //const elem = $('//div[@class="header_user_info"]//span');
-        //expect(elem).toHaveText('Dhananjay g');
-
         LoginPage.addtocart();
         browser.pause(5000);
         LoginPage.proceedChkout();
